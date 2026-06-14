@@ -163,8 +163,6 @@ This dashboard helps healthcare organizations:
 
 ## 👨‍💻 Author sukanya saha
 **PhD Research Scholar, CSIR-IICT** 
-
 MSC in Chemistry, IIT Madras
-
 Aspiring Data Scientist | Data Analyst  
 Python | SQL | Excel | Power BI | Machine Learning
