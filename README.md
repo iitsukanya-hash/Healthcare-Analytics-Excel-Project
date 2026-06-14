@@ -160,15 +160,8 @@ This dashboard helps healthcare organizations:
 - Conditional Formatting
 - KPI Cards
 
----
 
-## 📷 Dashboard Preview
-
-_Add dashboard screenshots here._
-
----
-
-## 👨‍💻 Author
+## 👨‍💻 Author sukanya saha
 
 **PhD Research Scholar, CSIR-IICT**  
 Aspiring Data Scientist | Data Analyst  
