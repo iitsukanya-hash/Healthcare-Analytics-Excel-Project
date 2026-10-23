@@ -1,171 +1,70 @@
-# 🏥 Healthcare Analytics Dashboard Using Microsoft Excel
+# Healthcare Analytics Dashboard (Microsoft Excel)
 
-## 📌 Project Overview
+An interactive Excel dashboard that analyses 9,976 patient records across admissions, medical conditions, billing, insurance and length of stay.
 
-This project presents an interactive Healthcare Analytics Dashboard developed using Microsoft Excel to transform raw patient healthcare data into meaningful insights. The dashboard helps healthcare administrators analyze patient admissions, medical conditions, billing trends, insurance utilization, hospitalization patterns, and overall hospital performance through data-driven visualizations.
-
----
-
-## 🎯 Business Problem
-
-Healthcare organizations manage thousands of patient records containing information related to admissions, treatments, insurance providers, billing amounts, and hospital stays. Analyzing this data manually is challenging and may not provide actionable insights.
-
-This dashboard was developed to answer key business questions such as:
+## Business Questions
 
 - Which medical conditions are most common?
-- Which admission type contributes the highest patient volume?
-- Which diseases generate the highest treatment costs?
-- How long do patients stay in hospitals on average?
-- Which insurance providers are most frequently used?
-- How do healthcare patterns vary across genders?
+- Which admission type has the highest volume?
+- Which conditions have the highest average billing?
+- How long do patients stay, by admission type?
+- Which insurance providers cover the most patients?
+- How do conditions differ by gender?
 
----
+## Data
 
-## 📊 Dataset Information
+- **9,976 patient records, 18 columns** (including 3 engineered columns), admissions from Oct 2018 to Oct 2023.
+- Fields: patient demographics, medical condition, medication, test result, doctor, hospital, room, insurance provider, billing amount, admission type, admission and discharge dates.
+- Billing amounts are shown in rupees (₹) in the dashboard.
 
-- Total Records: **9,976**
-- Total Features: **18**
+## Data Preparation
 
-### Patient Information
-- Name
-- Age
-- Gender
-- Blood Type
+- Checked for missing values and duplicate records (no duplicates remain).
+- Standardised Admission Type labels (for example `Emer` to `Emergency`).
+- Converted date columns to date format and billing to numeric.
+- Engineered columns: **Length of Stay** (discharge minus admission date), **Admission Month and Year**, and **Age Group** (Young, Middle, Old).
 
-### Medical Information
-- Medical Condition
-- Medication
-- Test Result
+## Dashboard
 
-### Hospital Information
-- Doctor
-- Hospital
-- Room Number
+KPI cards (total patients, total billing, average billing), admission trends, condition distribution, billing by condition and admission type, insurance distribution, length of stay and gender analysis, with interactive Slicers. Built with Pivot Tables, Pivot Charts, Slicers and conditional formatting.
 
-### Financial Information
-- Billing Amount
-- Insurance Provider
+## Key Findings (verified against the workbook)
 
-### Admission Information
-- Admission Type
-- Admission Date
-- Discharge Date
+| Metric | Result |
+|---|---|
+| Total patients | 9,976 |
+| Total billing | ₹233.3 M (average ₹23,389 per patient) |
+| Most common condition | Hypertension, 2,150 patients (21.6%) |
+| Highest average billing | Cancer, about ₹38,867 |
+| Largest admission type | Emergency, 3,578 (35.9%) |
+| Average length of stay | Emergency 15.6 days, Urgent 15.4, Elective 10.0 |
+| Largest insurer by patients | Medicare, 2,421 (24.3%) |
 
----
+- **Gender:** Hypertension is more common in male patients (61%), while Obesity (62%) and Diabetes (58%) are more common in female patients.
+- **Trend:** Yearly admissions were stable at about 2,000 a year from 2019 to 2022 (peak 2021 with 2,060). 2018 (3 months) and 2023 (10 months) are partial years, so their lower counts are not a true decline.
 
-## 🧹 Data Cleaning & Preparation
+## Suggested Follow-ups
 
-### Missing Value Handling
-- Checked for missing values in critical fields.
-- Ensured data completeness for analysis.
+- Review cost drivers for cancer treatment, which has the highest average bill.
+- Study why Emergency and Urgent stays are 5 to 6 days longer than Elective stays.
+- Examine hypertension patients by age group for prevention planning.
 
-### Duplicate Removal
-- Identified and removed duplicate patient records.
+## Limitations
 
-### Data Standardization
-- Standardized Admission Type values.
-  - Emer → Emergency
-- Standardized Blood Group values.
-  - A Positive → A+
-  - O Positive → O+
-  - AB Negative → AB-
-  - etc.
+- Dataset appears to be a public sample dataset, not hospital records; results illustrate the analysis method.
+- Findings are descriptive. They show patterns, not causes.
 
-### Data Formatting
-- Converted date columns into proper date format.
-- Validated billing amounts as numeric values.
+## Files
 
----
+| File | Description |
+|---|---|
+| `Health care data analysis_100626.xlsx` | Dashboard, pivot tables and cleaned data |
+| `HEALTHCARE ANALYTICS DASHBOARD PROJECT REPORT.docx` | Written project report |
 
-## ⚙️ Feature Engineering
+## Demo
 
-### Length of Stay
-Calculated using:
+[Project walkthrough on YouTube](https://www.youtube.com/watch?v=fUkHNTxduBg&t=1s)
 
-Length of Stay = Discharge Date - Admission Date
+## Author
 
-Purpose:
-- Analyze hospitalization duration
-- Resource utilization tracking
-
-### Admission Month
-Extracted from Admission Date for monthly trend analysis.
-
-### Admission Year
-Created to analyze yearly admission patterns.
-
-### Age Group Categorization
-Patients categorized into:
-- Young
-- Middle
-- Old
-
----
-
-## 📈 Dashboard Features
-
-- KPI Cards
-- Interactive Slicers
-- Admission Trend Analysis
-- Medical Condition Analysis
-- Billing Analysis
-- Insurance Provider Insights
-- Length of Stay Monitoring
-- Gender-Based Healthcare Analysis
-- Yearly Admission Trends
-
----
-
-## 🔍 Key Insights
-
-- Hypertension is the most prevalent medical condition.
-- Cancer patients incur the highest average medical bills.
-- Emergency admissions contribute the highest patient volume.
-- Emergency and Urgent admissions have longer hospital stays.
-- Admissions increased steadily from 2019 to 2022 before slightly declining in 2023.
-- Hypertension and Obesity are more common among male patients.
-- Insurance utilization is distributed across multiple providers.
-
----
-
-## 💡 Recommendations
-
-- Prioritize hypertension prevention programs.
-- Improve cost management strategies for cancer treatment.
-- Increase emergency care resources.
-- Reduce patient stay duration through efficient discharge planning.
-- Expand preventive healthcare and early screening initiatives.
-
----
-
-## 📈 Business Impact
-
-This dashboard helps healthcare organizations:
-
-- Improve decision-making
-- Optimize resource allocation
-- Enhance patient care management
-- Monitor healthcare costs
-- Identify healthcare trends quickly
-- Support strategic planning
-
----
-
-## 🛠 Tools Used
-
-- Microsoft Excel
-- Pivot Tables
-- Pivot Charts
-- Slicers
-- Conditional Formatting
-- KPI Cards
-## 🎥 Project Demo
-YouTube Video:
-https://www.youtube.com/watch?v=fUkHNTxduBg&t=1s
-
-
-## 👨‍💻 Author sukanya saha
-**PhD Research Scholar, CSIR-IICT** 
-MSC in Chemistry, IIT Madras
-Aspiring Data Scientist | Data Analyst  
-Python | SQL | Excel | Power BI | Machine Learning
+**Sukanya Saha** | [LinkedIn](https://www.linkedin.com/in/sukanya-saha-921a20295) | [Portfolio](https://sukanya-portfolio-rust.vercel.app/)
